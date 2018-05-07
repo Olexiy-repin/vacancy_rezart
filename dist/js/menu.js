@@ -1,0 +1,1 @@
+(()=>{let c=$(".vacancy-menu");c.hide(),$(".vacancy-title").on("click",()=>{c.slideToggle(600)})})();
