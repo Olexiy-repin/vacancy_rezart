@@ -12,62 +12,67 @@
 		});
 	}
 
+	$('.vacancy-title').click(function(){
+		$('.vacancy__container').addClass('active-content');
+	});
+
 	$('.vacancy__tab').click(function(){
 	 $('.vacancy__tab').removeClass('active');
 	 $('.vacancy__container').removeClass('active-content');
 	 $(this).addClass('active');
-	 console.log($('#'+$(this).data('id')));
-	 $('#'+$(this).attr('id')).addClass('active-content');
- })
+	 let vacancyContent =  $('#'+$(this).data('id'));
+	 vacancyContent.addClass('active-content');
 
-	// $('.vacancy-title').on('click', () => {
-	// 	$('.vacancy__container').show();
+	 let vacancyBlock = vacancyContent.find('.vacancy__block');
+	 if (vacancyBlock.length < 10) {
+		 $('.vacancy__more-btn').css('display', 'none');
+	 } else {
+		 $('.vacancy__more-btn').css('display', 'inline-block');
+	 }
+
+	 for (let i = 0; i < vacancyBlock.length; i++) {
+		if (i > 10) {
+			vacancyBlock[i].hide();
+		} else {
+			vacancyBlock[i].show();
+		}
+	 }
+ });
+
+	// $('.vacancy__tab').click(function(){
+	// 	for (let i = 0; i < vacancyBlock.length; i++) {
+	//  	if (i > 10) {
+	//  		vacancyBlock[i]
+	//  	}
+	//   }
 	// });
-	//
-	// 	$('.vacancy__sale').on('click', () => {
-	// 		$('.vacancy__container').hide();
-	// 		$('.vacancy__sale-container').show();
-	// 	});
-	//
-	// 	$('.vacancy__finance').on('click', () => {
-	// 		$('.vacancy__container').hide();
-	// 		$('.vacancy__finance-container').show();
-	// 	});
-	//
-	// 	$('.vacancy__hr').on('click', () => {
-	// 		$('.vacancy__container').hide();
-	// 		$('.vacancy__hr-container').show();
-	// 	});
-	//
-	// 	$('.vacancy__it').on('click', () => {
-	// 		$('.vacancy__container').hide();
-	// 		$('.vacancy__it-container').show();
-	// 	});
-	//
-	// 	$('.vacancy__marketing').on('click', () => {
-	// 		$('.vacancy__container').hide();
-	// 		$('.vacancy__marketing-container').show();
-	// 	});
-	//
-	// 	$('.vacancy__support').on('click', () => {
-	// 		$('.vacancy__container').hide();
-	// 		$('.vacancy__support-container').show();
-	// 	});
-	//
-	// 	$('.vacancy__legacy').on('click', () => {
-	// 		$('.vacancy__container').hide();
-	// 		$('.vacancy__legal-container').show();
-	// 	});
-	//
-	// 	$('.vacancy__beginner').on('click', () => {
-	// 		$('.vacancy__container').hide();
-	// 		$('.vacancy__beginner-container').show();
-	// 	});
-	//
-	// 	let vbCount = $('.vacancy__beginner-container .vacancy__block').length;
-	// 	console.log(vbCount);
-	// 	let vbNumber = $('.vacancy__beginner .vacancy-menu__count').textContent;
-	// 	vbNumber = 'vbCount';
+
+ let allVacancy = $('.vacancy__block').length;
+ $('.vacancy-title .vacancy-menu__count').text(allVacancy);
+
+ let saleVacancy = $('.vacancy__sale-container .vacancy__block').length;
+ $('.vacancy__sale + .vacancy-menu__count').text(saleVacancy);
+
+ let financeVacancy = $('.vacancy__finance-container .vacancy__block').length;
+ $('.vacancy__finance + .vacancy-menu__count').text(financeVacancy);
+
+ let hrVacancy = $('.vacancy__hr-container .vacancy__block').length;
+ $('.vacancy__hr + .vacancy-menu__count').text(hrVacancy);
+
+ let itVacancy = $('.vacancy__it-container .vacancy__block').length;
+ $('.vacancy__it + .vacancy-menu__count').text(itVacancy);
+
+ let marketingVacancy = $('.vacancy__marketing-container .vacancy__block').length;
+ $('.vacancy__marketing + .vacancy-menu__count').text(marketingVacancy);
+
+ let supportVacancy = $('.vacancy__support-container .vacancy__block').length;
+ $('.vacancy__support + .vacancy-menu__count').text(supportVacancy);
+
+ let legacyVacancy = $('.vacancy__legal-container .vacancy__block').length;
+ $('.vacancy__legacy + .vacancy-menu__count').text(legacyVacancy);
+
+ let beginnerVacancy = $('.vacancy__beginner-container .vacancy__block').length;
+ $('.vacancy__beginner + .vacancy-menu__count').text(beginnerVacancy);
 })();
 
 // (() => {

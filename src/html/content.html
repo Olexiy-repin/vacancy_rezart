@@ -3,16 +3,16 @@
     <div class="row">
       <div class="col-sm-12 col-xl-4">
         <div class="vacancy-menu-container">
-          <span class="vacancy__tab vacancy-title active">все вакансии</span>
+          <span class="vacancy-title active">все вакансии <span class="vacancy-menu__count">9</span></span>
           <div class="vacancy-menu">
-            <div class="vacancy-menu__item"><span id="first-tab" class="vacancy__tab vacancy__sale vs">продажи</span> <span class="vacancy-menu__count">9</span></div>
-            <div class="vacancy-menu__item"><span id="second-tab" class="vacancy__tab vacancy__finance vf">финансовый департамент</span> <span class="vacancy-menu__count">3</span></div>
-            <div class="vacancy-menu__item"><span id="third-tab" class="vacancy__tab vacancy__hr vh">hr</span> <span class="vacancy-menu__count">3</span></div>
-            <div class="vacancy-menu__item"><span id="fourth-tab" class="vacancy__tab vacancy__it vi">it</span> <span class="vacancy-menu__count">7</span></div>
-            <div class="vacancy-menu__item"><span id="fifth-tab" class="vacancy__tab vacancy__marketing vm">маркетинг</span> <span class="vacancy-menu__count">4</span></div>
-            <div class="vacancy-menu__item"><span id="six-tab" class="vacancy__tab vacancy__support vsu">поддержка клиентов</span> <span class="vacancy-menu__count">11</span></div>
-            <div class="vacancy-menu__item"><span id="seven-tab" class="vacancy__tab vacancy__legacy vl">юридичиский департамент</span> <span class="vacancy-menu__count">15</span></div>
-            <div class="vacancy-menu__item"><span id="eight-tab" class="vacancy__tab vacancy__beginner vb">для начинающих</span> <span class="vacancy-menu__count"></span></div>
+            <div class="vacancy-menu__item"><span data-id="first-tab" class="vacancy__tab vacancy__sale">продажи</span> <span class="vacancy-menu__count">9</span></div>
+            <div class="vacancy-menu__item"><span data-id="second-tab" class="vacancy__tab vacancy__finance">финансовый департамент</span> <span class="vacancy-menu__count">3</span></div>
+            <div class="vacancy-menu__item"><span data-id="third-tab" class="vacancy__tab vacancy__hr">hr</span> <span class="vacancy-menu__count">3</span></div>
+            <div class="vacancy-menu__item"><span data-id="fourth-tab" class="vacancy__tab vacancy__it">it</span> <span class="vacancy-menu__count">7</span></div>
+            <div class="vacancy-menu__item"><span data-id="fifth-tab" class="vacancy__tab vacancy__marketing">маркетинг</span> <span class="vacancy-menu__count">4</span></div>
+            <div class="vacancy-menu__item"><span data-id="six-tab" class="vacancy__tab vacancy__support">поддержка клиентов</span> <span class="vacancy-menu__count">11</span></div>
+            <div class="vacancy-menu__item"><span data-id="seven-tab" class="vacancy__tab vacancy__legacy">юридичиский департамент</span> <span class="vacancy-menu__count">15</span></div>
+            <div class="vacancy-menu__item"><span data-id="eight-tab" class="vacancy__tab vacancy__beginner">для начинающих</span> <span class="vacancy-menu__count"></span></div>
             <!-- <div class="vacancy-menu__item"><span class="vacancy__all-vacancy">все вакансии</span></div> -->
           </div>
           <div class="left-bar-img-container">
@@ -27,56 +27,92 @@
       <div class="col-sm-12 col-xl-8">
         <div class="all-vacancy-container">
           <!-- Вакансии с продажами -->
-          <div data="#first-tab" class="vacancy__container vacancy__sale-container vs active-content">
+          <div id="first-tab" class="vacancy__container vacancy__sale-container active-content">
             <div class="vacancy__block vacancy__sale-block">
               <p class="vacancy__sale-date">03 марта 2018</p>
               <p class="vacancy__sale-vacancy">Junior Python Software Engineer</p>
             </div>
           </div>
           <!-- Вакансии финансового департамента -->
-          <div data="#second-tab" class="vacancy__container vacancy__finance-container vf active-content">
+          <div id="second-tab" class="vacancy__container vacancy__finance-container active-content">
             <div class="vacancy__block vacancy__finance-block">
               <p class="vacancy__finance-date">03 марта 2018</p>
               <p class="vacancy__finance-vacancy">Talent Researcher</p>
             </div>
           </div>
           <!-- Вакансии HR -->
-          <div data="#third-tab" class="vacancy__container vacancy__hr-container vh active-content">
+          <div id="third-tab" class="vacancy__container vacancy__hr-container vh active-content">
             <div class="vacancy__block vacancy__hr-block">
               <p class="vacancy__hr-date">03 марта 2018</p>
               <p class="vacancy__hr-vacancy">Младший специалист по финансовой работе</p>
             </div>
           </div>
           <!-- Вакансии IT -->
-          <div data="#fourth-tab" class="vacancy__container vacancy__it-container vi active-content">
+          <div id="fourth-tab" class="vacancy__container vacancy__it-container vi active-content">
             <div class="vacancy__block vacancy__it-block">
               <p class="vacancy__it-date">03 марта 2018</p>
               <p class="vacancy__it-vacancy">IT sales manager (B2B)</p>
             </div>
           </div>
           <!-- Вакансии маркетинга -->
-          <div data="#fifth-tab" class="vacancy__container vacancy__marketing-container vm active-content">
+          <div id="fifth-tab" class="vacancy__container vacancy__marketing-container vm active-content">
             <div class="vacancy__block vacancy__marketing-block">
               <p class="vacancy__marketing-date">03 марта 2018</p>
               <p class="vacancy__marketing-vacancy">Аккаунт-менеджер</p>
             </div>
           </div>
           <!-- Вакансии поддержки клиентов -->
-          <div data="#six-tab" class="vacancy__container vacancy__support-container vsu active-content">
+          <div id="six-tab" class="vacancy__container vacancy__support-container vsu active-content">
             <div class="vacancy__block vacancy__support-block">
               <p class="vacancy__support-date">03 марта 2018</p>
               <p class="vacancy__support-vacancy">Junior Project manager</p>
             </div>
           </div>
           <!-- Вакансии юридического департамента -->
-          <div data="#seven-tab" class="vacancy__container vacancy__legal-container vl active-content">
+          <div id="seven-tab" class="vacancy__container vacancy__legal-container vl active-content">
             <div class="vacancy__block vacancy__legal-block">
               <p class="vacancy__legal-date">03 марта 2018</p>
               <p class="vacancy__legal-vacancy">Специалист по работе с обращениями клиентов <br> (отдел контроля качества)</p>
             </div>
           </div>
           <!-- Вакансии для начинающих -->
-          <div data="#eight-tab" class="vacancy__container vacancy__beginner-container vb active-content">
+          <div id="eight-tab" class="vacancy__container vacancy__beginner-container vb active-content">
+            <div class="vacancy__block vabeginner__legal-block">
+              <p class="vacancy__beginner-date">03 марта 2018</p>
+              <p class="vacancy__beginner-vacancy">Ассистент менеджера по контекстной рекламе</p>
+            </div>
+            <div class="vacancy__block vabeginner__legal-block">
+              <p class="vacancy__beginner-date">03 марта 2018</p>
+              <p class="vacancy__beginner-vacancy">Специалист по видео контенту</p>
+            </div>
+            <div class="vacancy__block vabeginner__legal-block">
+              <p class="vacancy__beginner-date">03 марта 2018</p>
+              <p class="vacancy__beginner-vacancy">Аккаунт-менеджер</p>
+            </div>
+            <div class="vacancy__block vabeginner__legal-block">
+              <p class="vacancy__beginner-date">03 марта 2018</p>
+              <p class="vacancy__beginner-vacancy">Ассистент менеджера по контекстной рекламе</p>
+            </div>
+            <div class="vacancy__block vabeginner__legal-block">
+              <p class="vacancy__beginner-date">03 марта 2018</p>
+              <p class="vacancy__beginner-vacancy">Специалист по видео контенту</p>
+            </div>
+            <div class="vacancy__block vabeginner__legal-block">
+              <p class="vacancy__beginner-date">03 марта 2018</p>
+              <p class="vacancy__beginner-vacancy">Аккаунт-менеджер</p>
+            </div>
+            <div class="vacancy__block vabeginner__legal-block">
+              <p class="vacancy__beginner-date">03 марта 2018</p>
+              <p class="vacancy__beginner-vacancy">Ассистент менеджера по контекстной рекламе</p>
+            </div>
+            <div class="vacancy__block vabeginner__legal-block">
+              <p class="vacancy__beginner-date">03 марта 2018</p>
+              <p class="vacancy__beginner-vacancy">Специалист по видео контенту</p>
+            </div>
+            <div class="vacancy__block vabeginner__legal-block">
+              <p class="vacancy__beginner-date">03 марта 2018</p>
+              <p class="vacancy__beginner-vacancy">Аккаунт-менеджер</p>
+            </div>
             <div class="vacancy__block vabeginner__legal-block">
               <p class="vacancy__beginner-date">03 марта 2018</p>
               <p class="vacancy__beginner-vacancy">Ассистент менеджера по контекстной рекламе</p>
