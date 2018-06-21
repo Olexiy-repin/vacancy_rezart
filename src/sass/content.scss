@@ -12,7 +12,7 @@
 	position: relative;
 	font-family: GilroyEB;
 	font-size: pxToRem(14px);
-	color: #b39c72;
+	color: #8d8d8d;
 	text-transform: uppercase;
 	letter-spacing: 0.5px;
 	padding-right: 1.2rem;
@@ -82,6 +82,7 @@
 }
 
 .vacancy__container {
+	display: none;
 	margin-bottom: 1.3rem;
 	&:last-of-type {
 		margin-bottom: 0;
@@ -222,4 +223,16 @@
 			color: #2b4b8d;
 		}
 	}
+}
+
+.active {
+  color: #b39c72;
+}
+
+.vacancy__tab.active:hover {
+  color: #b39c72!important;
+}
+
+.active-content {
+	display: block;
 }
